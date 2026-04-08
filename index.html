@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Estrategico Eliana 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"]
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @keyframes orb-a {
+        0%, 100% { transform: translate(-8%, 0%) scale(1); }
+        50% { transform: translate(8%, -6%) scale(1.12); }
+      }
+      @keyframes orb-b {
+        0%, 100% { transform: translate(10%, 4%) scale(1); }
+        50% { transform: translate(-10%, -8%) scale(1.1); }
+      }
+      @keyframes pulse-ring {
+        0%, 100% { opacity: 0.4; transform: scale(0.95); }
+        50% { opacity: 0.9; transform: scale(1.05); }
+      }
+      .fusion-a { animation: orb-a 8s ease-in-out infinite; }
+      .fusion-b { animation: orb-b 9s ease-in-out infinite; }
+      .fusion-ring { animation: pulse-ring 6s ease-in-out infinite; }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <a
+      href="#contenido-principal"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-cyan-300 focus:px-4 focus:py-2 focus:text-slate-900 focus:rounded-md"
+      >Saltar al contenido principal</a
+    >
+
+    <header class="fixed top-0 z-50 w-full backdrop-blur bg-slate-950/70 border-b border-slate-800">
+      <nav
+        class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between"
+        aria-label="Navegacion principal"
+      >
+        <a
+          href="#contacto"
+          class="rounded-xl border border-cyan-300 px-4 py-2 text-cyan-200 font-medium hover:bg-cyan-300 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+          >Contacto</a
+        >
+        <a class="text-slate-300 font-medium" href="#hero">Eliana 2026</a>
+        <a
+          href="#proyectos-dev"
+          class="rounded-xl border border-violet-300 px-4 py-2 text-violet-200 font-medium hover:bg-violet-300 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300"
+          >Proyectos / Dev</a
+        >
+      </nav>
+    </header>
+
+    <main id="contenido-principal">
+      <section
+        id="hero"
+        class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28"
+        aria-labelledby="hero-titulo"
+      >
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
+        <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+          <div class="fusion-a absolute h-72 w-72 rounded-full bg-cyan-400/45 blur-3xl"></div>
+          <div class="fusion-b absolute h-72 w-72 rounded-full bg-violet-400/45 blur-3xl mix-blend-screen"></div>
+          <div class="fusion-ring absolute h-80 w-80 rounded-full border border-cyan-200/40"></div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-4xl text-center">
+          <p class="text-sm tracking-wider uppercase text-cyan-200/90">
+            Comunicacion humana + ingenieria de software
+          </p>
+          <h1 id="hero-titulo" class="mt-4 text-4xl md:text-6xl font-bold leading-tight">
+            Fusión de empatia y tecnologia para crear impacto real
+          </h1>
+          <p id="parrafo-1" class="mt-6 text-lg text-slate-200 max-w-3xl mx-auto">
+            Este portfolio estrategico presenta una vision donde cada solucion tecnica nace
+            con perspectiva social, inclusion y accesibilidad como parte central del diseno.
+          </p>
+          <button
+            type="button"
+            class="mt-3 rounded-lg border border-slate-500 px-3 py-2 text-sm text-slate-100 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+            data-audio-target="parrafo-1"
+            aria-label="Escuchar parrafo de vision principal"
+          >
+            Escuchar parrafo
+          </button>
+        </div>
+      </section>
+
+      <section id="proyectos-dev" class="mx-auto max-w-5xl px-6 py-16">
+        <h2 class="text-3xl font-semibold">Proyectos / Dev</h2>
+        <p id="parrafo-2" class="mt-4 text-slate-300 max-w-3xl">
+          Aqui se visibiliza expertise full stack: arquitectura limpia, automatizacion,
+          integraciones con IA y practicas de calidad para productos escalables y humanos.
+        </p>
+        <button
+          type="button"
+          class="mt-3 rounded-lg border border-slate-500 px-3 py-2 text-sm text-slate-100 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+          data-audio-target="parrafo-2"
+          aria-label="Escuchar parrafo de proyectos"
+        >
+          Escuchar parrafo
+        </button>
+      </section>
+
+      <section id="contacto" class="mx-auto max-w-5xl px-6 pb-20">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 md:p-8">
+          <h2 class="text-3xl font-semibold">Contacto inclusivo</h2>
+          <p id="parrafo-3" class="mt-4 text-slate-300">
+            Este formulario propone una experiencia amable, con validaciones claras y
+            campos que respetan la diversidad de identidades sin suposiciones previas.
+          </p>
+          <button
+            type="button"
+            class="mt-3 rounded-lg border border-slate-500 px-3 py-2 text-sm text-slate-100 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+            data-audio-target="parrafo-3"
+            aria-label="Escuchar parrafo del formulario"
+          >
+            Escuchar parrafo
+          </button>
+
+          <form id="form-contacto" class="mt-8 grid gap-5" novalidate>
+            <div>
+              <label for="nombre" class="block text-sm font-medium mb-2">Nombre elegido</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                autocomplete="name"
+                required
+                placeholder="Ejemplo: Eli"
+                class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                aria-describedby="error-nombre"
+              />
+              <p id="error-nombre" class="mt-1 text-sm text-rose-300"></p>
+            </div>
+
+            <div>
+              <label for="mail" class="block text-sm font-medium mb-2">Mail</label>
+              <input
+                id="mail"
+                name="mail"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="tu-mail@ejemplo.com"
+                class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                aria-describedby="error-mail"
+              />
+              <p id="error-mail" class="mt-1 text-sm text-rose-300"></p>
+            </div>
+
+            <div>
+              <label for="whatsapp" class="block text-sm font-medium mb-2">WhatsApp (opcional)</label>
+              <input
+                id="whatsapp"
+                name="whatsapp"
+                type="tel"
+                placeholder="+54 9 ..."
+                class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+              />
+            </div>
+
+            <div>
+              <label for="pronombres" class="block text-sm font-medium mb-2">Pronombres (opcional)</label>
+              <input
+                id="pronombres"
+                name="pronombres"
+                type="text"
+                placeholder="Ejemplo: ella, el, elle, prefiero no decir"
+                class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+              />
+            </div>
+
+            <div>
+              <label for="consulta" class="block text-sm font-medium mb-2">Consulta</label>
+              <textarea
+                id="consulta"
+                name="consulta"
+                rows="4"
+                required
+                placeholder="Contame que estas necesitando y te respondo a la brevedad."
+                class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                aria-describedby="error-consulta"
+              ></textarea>
+              <p id="error-consulta" class="mt-1 text-sm text-rose-300"></p>
+            </div>
+
+            <button
+              type="submit"
+              class="justify-self-start rounded-xl bg-cyan-300 px-5 py-3 font-semibold text-slate-900 hover:bg-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+            >
+              Enviar consulta
+            </button>
+
+            <p id="mensaje-estado" role="status" aria-live="polite" class="text-sm text-slate-300"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
