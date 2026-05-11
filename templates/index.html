@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliana — Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/style.css') }}"
+    />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Principal">
+        <div class="navbar__brand">
+          <a class="btn btn--pill btn--outline" href="/eliana">Eliana</a>
+        </div>
+        <span class="navbar__divider" aria-hidden="true"></span>
+        <div class="navbar__center">
+          <a
+            class="btn btn--pill btn--primary"
+            href="https://calendly.com/elianamariacorujo/30min"
+            onclick="if (!window.Calendly) return true; Calendly.initPopupWidget({url: 'https://calendly.com/elianamariacorujo/30min', parentElement: this, color: '#eccaf5', textColor: '#000000'}); return false;"
+            >Agendá una reunión</a
+          >
+        </div>
+        <span class="navbar__divider" aria-hidden="true"></span>
+        <div class="navbar__actions">
+          <div class="navbar__dropdown" data-dropdown>
+            <button
+              type="button"
+              class="btn btn--pill btn--outline navbar__dropdown-trigger"
+              data-dropdown-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
+              id="nav-menu-proyectos"
+            >
+              Proyectos
+              <span class="navbar__dropdown-chevron" aria-hidden="true"></span>
+            </button>
+            <div
+              class="navbar__dropdown-panel"
+              data-dropdown-panel
+              role="menu"
+              aria-labelledby="nav-menu-proyectos"
+              hidden
+            >
+              <a
+                class="navbar__dropdown-link"
+                role="menuitem"
+                href="/proyectos/msn-consultorias"
+                >MSN Consultorías</a
+              >
+              <a
+                class="navbar__dropdown-link"
+                role="menuitem"
+                href="/proyectos/que-como-hoy"
+                >¿Qué Como hoy?</a
+              >
+              <a
+                class="navbar__dropdown-link"
+                role="menuitem"
+                href="/proyectos/cebollati"
+                >Cebollatí</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="site-main" id="contenido-principal">
+      <div class="game-placeholder" role="region" aria-label="Área del juego">
+        <div class="game-shell">
+          <canvas id="grid-canvas" aria-label="Grilla 20 por 20"></canvas>
+          <div
+            id="game-start-overlay"
+            class="game-overlay"
+            aria-hidden="false"
+          >
+            <button
+              type="button"
+              id="game-play-btn"
+              class="btn btn--pill btn--primary"
+            >
+              Jugar
+            </button>
+          </div>
+          <div
+            id="game-win-overlay"
+            class="game-overlay game-win-overlay"
+            hidden
+            aria-hidden="true"
+          >
+            <div class="game-win-inner">
+              <p class="game-win-msg">¡Ganaste!</p>
+              <button
+                type="button"
+                id="game-win-btn"
+                class="btn btn--pill btn--primary"
+              >
+                Volver a jugar
+              </button>
+            </div>
+          </div>
+          <div
+            id="game-lose-overlay"
+            class="game-overlay game-lose-overlay"
+            hidden
+            aria-hidden="true"
+          >
+            <div class="game-lose-inner">
+              <p class="game-lose-msg">¡Vamo' arriba!</p>
+              <button
+                type="button"
+                id="game-lose-btn"
+                class="btn btn--pill btn--outline"
+              >
+                Volver a jugar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="{{ url_for('static', path='js/nav-dropdown.js') }}"
+      defer
+    ></script>
+    <script
+      src="{{ url_for('static', path='js/grid-canvas-demo.js') }}"
+      defer
+    ></script>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a
+          class="footer-link"
+          href="https://www.linkedin.com/in/elianamariacorujo"
+          rel="noopener noreferrer"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a
+          class="footer-link"
+          href="https://github.com/ElianaMariaCorujo"
+          rel="noopener noreferrer"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
