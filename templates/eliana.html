@@ -1,24 +1,6 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre mí — Eliana</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', path='css/style.css') }}"
-    />
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
-  </head>
-  <body>
+{% extends "base.html" %}
+
+{% block content %}
     <header class="site-header">
       <nav class="navbar" aria-label="Principal">
         <div class="navbar__brand">
@@ -131,9 +113,11 @@
         >
       </div>
     </footer>
+{% endblock %}
+
+{% block extra_scripts %}
     <script
       src="{{ url_for('static', path='js/nav-dropdown.js') }}"
       defer
     ></script>
-  </body>
-</html>
+{% endblock %}

@@ -15,9 +15,11 @@
 
 html {
   color-scheme: dark;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   min-height: 100dvh;
   display: flex;
@@ -49,6 +51,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow-x: hidden;
   border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 18%, transparent);
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   backdrop-filter: blur(10px);
@@ -249,7 +252,15 @@ a:hover {
   margin-right: auto;
   padding-top: 60px;
   padding-bottom: 3rem;
+  padding-left: clamp(0.75rem, 3vw, 1.5rem);
+  padding-right: clamp(0.75rem, 3vw, 1.5rem);
   color: #eccaf5;
+}
+
+.page-eliana__inner > h1 {
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
+  line-height: 1.25;
+  word-break: break-word;
 }
 
 .page-eliana__back {
@@ -467,4 +478,98 @@ a:hover {
   opacity: 1;
   text-decoration: none;
   border-bottom: 1px solid var(--color-accent);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 52rem) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.4rem;
+    padding: 0.75rem 0.75rem;
+  }
+
+  .navbar__divider {
+    display: none;
+  }
+
+  .navbar__brand,
+  .navbar__center,
+  .navbar__actions {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .navbar .btn {
+    font-size: clamp(0.72rem, 2.8vw, 0.875rem);
+    padding: 0.5rem 0.7rem;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .navbar__dropdown-panel {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    min-width: min(13.5rem, calc(100vw - 1.5rem));
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .navbar__dropdown.is-open .navbar__dropdown-panel {
+    transform: translateX(-50%);
+  }
+
+  .navbar__dropdown-link {
+    font-size: clamp(0.72rem, 2.9vw, 0.875rem);
+    padding: 0.5rem 0.75rem;
+    word-break: break-word;
+  }
+
+  .site-main {
+    padding: 1rem 0.75rem;
+  }
+
+  .page-eliana__inner {
+    padding-top: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .page-eliana__terminal {
+    padding: 1rem 1rem;
+  }
+
+  .page-eliana__divider {
+    margin: 1.75rem 0;
+  }
+
+  .game-placeholder {
+    width: 100%;
+  }
+
+  .game-win-msg,
+  .game-lose-msg {
+    font-size: clamp(0.95rem, 4vw, 1.125rem);
+    max-width: min(18rem, 100%);
+  }
+}
+
+@media (max-width: 22rem) {
+  .navbar .btn {
+    font-size: 0.68rem;
+    padding: 0.45rem 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__dropdown-panel,
+  .navbar__dropdown-chevron,
+  .btn,
+  .game-overlay {
+    transition: none !important;
+  }
 }

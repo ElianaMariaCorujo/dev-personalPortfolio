@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Eliana Maria Corujo{% endblock %}</title>
+    <meta
+      name="description"
+      content="{% block meta_description %}Portfolio de Eliana Maria Corujo, desarrolladora especializada en Python y FastAPI con sólida base en comunicación estratégica y enfoque de género.{% endblock %}"
+    />
+    <meta
+      name="keywords"
+      content="Eliana Maria Corujo, Desarrolladora Full Stack, Python, FastAPI, Comunicación, Estrategia Digital, IA, Inteligencia Artificial, Portfolio IT"
+    />
+    <link rel="canonical" href="https://elianamariacorujo.com/" />
+
+    <meta property="og:title" content="Eliana Maria Corujo" />
+    <meta
+      property="og:description"
+      content="Portfolio de Eliana Maria Corujo, desarrolladora especializada en Python y FastAPI con sólida base en comunicación estratégica y enfoque de género."
+    />
+    <meta property="og:url" content="https://elianamariacorujo.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Eliana Maria Corujo" />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Eliana Maria Corujo, desarrolladora especializada en Python y FastAPI con sólida base en comunicación estratégica y enfoque de género."
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/style.css') }}"
+    />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    {% block extra_scripts %}{% endblock %}
+  </body>
+</html>
